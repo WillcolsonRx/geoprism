@@ -1,0 +1,33 @@
+body {
+  background-color: #ffffff;
+}
+
+.well {
+  border-radius: 8px;
+}
+
+.btn {
+  border-radius: 6px;
+}
+
+.tab-content {
+  padding-top: 8px;
+}
+
+.dataTables_wrapper {
+  font-size: 13px;
+}
+
+.plotly.html-widget {
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+}
+
+/* GEOPrism presentation layer; computation is unchanged. */
+body { color: #172438; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+h2 { color: #142d40; font-weight: 700; letter-spacing: -0.5px; }
+.well { background: #f4f8fa; border-color: #dae4e9; }
+.btn-primary { background: #146b72; border-color: #146b72; }
+.btn-primary:hover, .btn-primary:focus { background: #0e555c; border-color: #0e555c; }
+a { color: #146b72; }
+.nav-tabs > li.active > a { border-top: 3px solid #146b72; }

@@ -1,0 +1,16 @@
+{
+  "name": "geoprism",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GEOPrism static project website and interactive synthetic PCA explorer",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test tests/*.test.cjs",
+    "preview:build": "node tools/build-preview.mjs",
+    "package:app": "python tools/package_source.py"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "Apache-2.0"
+}
