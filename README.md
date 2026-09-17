@@ -147,23 +147,6 @@ When probes are kept separately, PCA uses those probe-level rows even where the 
 - `Exclude` affects PCA when enabled; other exports retain the selected samples.
 - Static figure downloads use the ggplot controls. Browser-only zoom, legend hiding, drawings, and selections are not carried into these exports.
 
-## Project map
-
-The repository contains the R application and a separate static website. Only `docs/` is served by GitHub Pages. The generated `GEOPrism-preview.html` stays local and is not tracked. Maintainer publishing and validation notes live in `.github/`. The app download in `docs/downloads/` is rebuilt with `npm run package:app`.
-
-| Path | Purpose |
-| :--- | :--- |
-| `app.R` | Shiny interface, reactive data workflow, PCA, downloads |
-| `R/helpers.R` | Platform mapping, matrix formatting, helper functions |
-| `install_packages.R` | Dependency setup |
-| `www/styles.css` | Application styling |
-| `docs/index.html` | Responsive GEOPrism project landing page |
-| `docs/guide.html` | Installation, workflow, methods, troubleshooting |
-| `docs/assets/` | Brand assets, explorer renderer, PCA core, styles and scripts |
-| `tools/serve.mjs` | Dependency-free Node.js preview server |
-| `tests/explorer.test.cjs` | Numerical and projection checks for the browser demo |
-| `.github/PUBLISHING.md` | Repository launch and GitHub Pages setup |
-| `CONTRIBUTING.md` | Contribution and issue-reporting guide |
 
 ## A home for the project
 
@@ -183,17 +166,6 @@ python -m http.server 8000 --directory docs
 
 Then visit `http://localhost:8000`. See [PUBLISHING.md](.github/PUBLISHING.md) to publish through GitHub Pages and connect an independently hosted Shiny app.
 
-## Current release notes
-
-This package adds GEOPrism branding, documentation, a static project website, and an explicit SVG-export dependency. The supplied PCA mathematics and data workflow are unchanged.
-
-Known behaviors and validation status are recorded in [CHANGELOG.md](CHANGELOG.md). In particular, load a new accession before exporting: editing its text field alone can change export filenames while retaining the previous dataset.
-
-## Contribute & acknowledge
-
-Platform mappings, reproducibility improvements, and clear bug reports are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
-
-GEOPrism builds on [NCBI GEO](https://www.ncbi.nlm.nih.gov/geo/), [Shiny](https://shiny.posit.co/), [GEOquery](https://bioconductor.org/packages/GEOquery/), [AnnotationDbi](https://bioconductor.org/packages/AnnotationDbi/), [ggplot2](https://ggplot2.tidyverse.org/), [Plotly for R](https://plotly.com/r/), and [DT](https://rstudio.github.io/DT/). Cite the original GEO study and the packages used in your work; consult `citation("GEOquery")` and the corresponding package citation commands.
 
 **License:** [Apache License 2.0](LICENSE). Dependencies and GEO datasets retain their respective licenses and terms.
 
